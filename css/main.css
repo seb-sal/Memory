@@ -1,4 +1,57 @@
-h1 {
-	color: blue;
+body {
+	background: url("https://i.imgur.com/Ac5Ty8w.png");
+	background-size: 1527px 850px;
+	background-repeat: no-repeat;
+}
+
+#board{
+	background: url("https://i.imgur.com/wCqSr06.jpg");
+	background-size: 1527px 850px;
+	background-repeat: no-repeat;
+}
+
+
+header {
+	font-size: 20px;
+	font-family: Calibri;
+	padding-top: -50px auto;
+}
+
+.all {
 	text-align: center;
-};
+	position: center;
+	
+	padding: 0px 0px 0px 0px;
+	background-color: #FF7F35;
+	color: white;
+	font-family: Calibri;
+	border: 25px solid white;
+	border-radius: 100px;
+	max-width: 500px;
+}
+
+.text {
+	margin: 50px;
+	padding: 0px 60px 0px 60px;
+	font-size: 20px;
+}
+
+.buttons {
+	padding-bottom: 20px;
+	font-size: 20px;
+}
+
+.table {
+	text-align: center;
+	position: center;
+	padding: 0px 0px 0px 0px;
+
+}
+
+.cell {
+	display: inline-table;
+	font-size: 50px;
+	padding: 10px 10px 10px 10px;
+	border: 1px solid;
+	width: 50px;
+}
