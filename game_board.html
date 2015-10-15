@@ -11,43 +11,40 @@
 		<h1>Game Board</h1>
 	</header>
 	
-	<div class="table">	
+	<div class="table">
 	<div class="row1">
-		<div class="cell" id="c1"></div>
-		<div class="cell" id="c2"></div>
-		<div class="cell" id="c3"></div>
-		<div class="cell" id="c4"></div>
-		<div class="cell" id="c5"></div>
+		<div class="cell" id="0,0"></div>
+		<div class="cell" id="0,1"></div>
+		<div class="cell" id="0,2"></div>
+		<div class="cell" id="0,3"></div>
 	</div>
 
 	<div class="row2">
-		<div class="cell" id="c6"></div>
-		<div class="cell" id="c7"></div>
-		<div class="cell" id="c8"></div>
-		<div class="cell" id="c9"></div>
-		<div class="cell" id="c10"></div>
+		<div class="cell" id="1,0"></div>
+		<div class="cell" id="1,1"></div>
+		<div class="cell" id="1,2"></div>
+		<div class="cell" id="1,3"></div>
 	</div>
 
 	<div class="row3">
-		<div class="cell" id="c11"></div>
-		<div class="cell" id="c12"></div>
-		<div class="cell" id="c13"></div>
-		<div class="cell" id="c14"></div>
-		<div class="cell" id="c15"></div>
+		<div class="cell" id="2,0"></div>
+		<div class="cell" id="2,1"></div>
+		<div class="cell" id="2,2"></div>
+		<div class="cell" id="2,3"></div>
 	</div>
 
 	<div class="row4">
-		<div class="cell" id="c16"></div>
-		<div class="cell" id="c17"></div>
-		<div class="cell" id="c18"></div>
-		<div class="cell" id="c19"></div>
-		<div class="cell" id="c20"></div>
+		<div class="cell" id="3,0"></div>
+		<div class="cell" id="3,1"></div>
+		<div class="cell" id="3,2"></div>
+		<div class="cell" id="3,3"></div>
 	</div>
 	</div>
 	<form class="footer">
-		<input class="game-buttons" type="button" value="Quit" onclick="getConfirmation();"/>
-		<input class="game-buttons" type="button" value="Start" onclick="startGame();"/>
-		 <input class="game-buttons" type="button" value="Level 1" onclick="level1();"/> 
+		<input class="game-buttons" type="button" value="Quit" onclick="getConfirmation()";/>
+		<input class="game-buttons" id="easy-button" type="button" value="Easy"/> 
+		<input class="game-buttons" id="med-button" type="button" value="Medium"/> 
+		<input class="game-buttons" id="hard-button" type="button" value="Hard"/> 
 	</form>
 </body>
 </html>
