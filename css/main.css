@@ -16,7 +16,6 @@ header {
 	font-size: 20px;
 	font-family: Calibri;
 	padding-top: -50px auto;
-
 }
 
 #board-header {
@@ -25,7 +24,7 @@ header {
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
-	width: 60%;
+	width: 100%;
 	margin-top: 40px;
 	font-size: 40px;
 	font-family: Calibri;
@@ -96,6 +95,19 @@ header {
 	width: 100px;
 }
 
-.comp-background {
-	background-color: burlywood;
+#lives, #score {
+	display: inline-block;
+	position: absolute;
+}
+
+#lives {
+	left: 20px;
+}
+
+#score {
+	right: 20px;
+}
+
+.tile {
+	padding: 10px 10px 10px 0px;
 }
