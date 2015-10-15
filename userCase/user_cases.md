@@ -7,9 +7,9 @@ Describe the basic functions of the Matrix Memory Game
 
 **User cases:**
 
-- [ ] As a PLAYER, I want to know how to PLAY THE GAME; so, I click the learn button.
+- [x] As a PLAYER, I want to know how to PLAY THE GAME; so, I click the learn button.
 
-- [ ] As a PLAYER, I want to be able to PLAY the game; so I click the 'PLAY' button in order to play the game.
+- [x] As a PLAYER, I want to be able to PLAY the game; so I click the 'PLAY' button in order to play the game.
 
 - [ ] As a PLAYER, I want to RUN the game; so I click the start button in order to run the game.
 
@@ -25,12 +25,14 @@ Describe the basic functions of the Matrix Memory Game
 
 - [ ] As a PLAYER, I want to know when my chances are over; so, the game should should prompt me with a 'Game Over' box
 
-__MVP:__
--
--
--
--
--
 
+**MVP:**
 
+- [ ] Computer chooses random tiles.
+
+- [ ] Player chooses tiles.
+
+- [ ] Game identifies correct tiles.
+
+- [ ] Game identifies incorrect tiles.
 

@@ -50,7 +50,7 @@ var randomMoves = function (num) {
 //global variables
 var randomY; 
 var randomX;
-var computerMove = [];
+var computerMove;
 
 //get one random number
 var computerPlay = function() {
@@ -100,11 +100,11 @@ var boxColors = function() {
 			if (board[i][j] === true){
 				$('#' + i + ","+ j).addClass('.comp-background');
 				$('#' + i + ","+ j).fadeOut(3000, function() {
-					$('#' + i + ","+ j).removeClass('.comp-background')	
+				$('#' + i + ","+ j).removeClass('.comp-background')	
 				});
-			}
 			}
 		}
 	}
+}
 
 

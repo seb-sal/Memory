@@ -6,26 +6,33 @@ body {
 }
 
 #board{
-	background: url("https://i.imgur.com/AOTn421.jpg");
+	background: url("https://i.imgur.com/wCqSr06.jpg");
 	position: relative;
-	background-size: cover; 
-}
+	background-size: 1200px 850px;
 
+}
 
 header {
 	font-size: 20px;
 	font-family: Calibri;
 	padding-top: -50px auto;
+
 }
-h1 {
+
+#board-header {
 	text-align: center;
 	position: absolute;
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
 	width: 60%;
-	margin-top: 50px;
+	margin-top: 40px;
+	font-size: 40px;
+	font-family: Calibri;
+	color: #FF7F35;;
+	
 }
+
 .all {
 	text-align: center;
 	position: absolute;
@@ -60,7 +67,7 @@ h1 {
 	left: 50%;
 	transform: translate(-50%, -50%);
 	width: 60%;
-	margin-top: 330px;
+	margin-top: 350px;
 }
 
 .cell {
@@ -70,8 +77,8 @@ h1 {
 	border: 1px solid;
 	width: 80px;
 	height: 80px;
-	border: 10px solid white;
-	border-radius: 10px;
+	border: 8px solid white;
+	border-radius: 20px;
 	border-color: #FF7F35;
 }
 
@@ -82,7 +89,7 @@ h1 {
 	left: 50%;
 	transform: translate(-50%, -50%);
 	width: 60%;
-	margin-top: 600px;
+	margin-top: 650px;
 }
 .game-buttons {
 	height: 500px;
