@@ -1,11 +1,15 @@
 ##IMPORTANT INFORMATION##
 
+<<<<<<< HEAD
 **Memory folder:** 
 
 This repo contains the .html, .css and .js script for a basic memory game matrix.
 
 
 **Repo**
+=======
+**Memory folder:** This repo contains the .html, .css and .js script for a basic memory game matrix.
+>>>>>>> a49409e5de876d812cca6a3ab0a44aa3bdfd6510
 
 Enclosed, you will find the following files:
 - 1. A css folder which includes all the game assets and .css file
