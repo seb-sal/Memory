@@ -11,10 +11,10 @@ body {
 }
 
 #board{
-	background: url("https://i.imgur.com/toxG4jy.jpg");
+	background: url("https://i.imgur.com/wCqSr06.jpg");
 	position: relative;
-	
-	background-position: center;
+	background-size: 2000px 1000px;
+	background-repeat: no-repeat;
 
 
 }
