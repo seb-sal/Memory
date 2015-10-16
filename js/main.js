@@ -1,3 +1,4 @@
+
 //global variables
 var level;
 var board;
@@ -10,13 +11,8 @@ var $score = $('#score');
 var $cell = $('.cell');
 
 //users need to exit the game
-function getConfirmation() {
-	var message = confirm("Are you sure you want to quit?");
-	if (message === true) {
-		return window.location = "/index.html";
-	} else {
-		return false;
-	}
+function restart() {
+	reset();
 }
 
 // reset function
@@ -30,6 +26,7 @@ function reset() {
 	lives = 3;
 	score = 0;
 	clicksRemaining = null;
+	$('.cell').css('background-color', 'transparent')
 	// clear out any created divs in table
 	$('.cell').html('');
 }
@@ -62,23 +59,27 @@ $('.table').on('click', function(evt) {
 		return;
 	}
 	console.log('clicked: ', evt.target.id)
+
 	if (evt.target.innerHTML === '') {
-		// do loser
-		console.log("LOSER")
+		$(evt.target).css('background-color', '#ff0000')
+		if(clicksRemaining === 0) {
+			}
+		console.log("LOSER");
+
 	} else {
 		evt.target.innerHTML = '';
+		$(evt.target).css('background-color', 'green')
 		clicksRemaining--;
 	}
 	if ($('.tile').length === 0) {
-		// winner
 		console.log('WINNER')
 	}
 
 });
 
 //develop on click actions for Quit button
-$('#quit').on('click', function() {
-	getConfirmation();
+$('#restart').on('click', function() {
+	restart();
 })
 
 //develop on click actions for Easy button
@@ -142,20 +143,20 @@ var setTiles = function() {
 
 //Develop easy level function
 var levelEasy = function() {
-	level = 2;
+	level = 7;
 	playGame();
 }
 
 
 //Develop medium level function
 var levelMed = function() {
-	level = 4;
+	level = 10;
 	playGame();
 }
 
 
 //Develop hard level function
 var levelHard = function() {
-	level = 6;
+	level = 13;
 	playGame();
 }
