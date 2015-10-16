@@ -1,9 +1,10 @@
 //global variables
-var randomNumbers = [];
 var level;
 var board;
 var lives;
 var score;
+var flashingTiles;
+var clicksRemaining;
 var $lives = $('#lives');
 var $score = $('#score');
 var $cell = $('.cell');
@@ -16,7 +17,6 @@ function getConfirmation() {
 	} else {
 		return false;
 	}
-
 }
 
 // reset function
@@ -29,9 +29,10 @@ function reset() {
 	];
 	lives = 3;
 	score = 0;
+	clicksRemaining = null;
+	// clear out any created divs in table
+	$('.cell').html('');
 }
-
-reset();
 
 function render() {
 	// display lives
@@ -45,30 +46,57 @@ function render() {
 
 //flashTiles function
 function flashTiles() {
+	flashingTiles = true;
+	$('.tile').fadeIn(600);
+	setTimeout(function() {
+		$('.tile').fadeOut(600, function() {
+			flashingTiles = false;
+		});
+	}, 1500);
 }
 
+// listen for click on cells
+$('.table').on('click', function(evt) {
+	if (flashingTiles || clicksRemaining <= 0 || clicksRemaining === null) {
+		evt.preventDefault();
+		return;
+	}
+	console.log('clicked: ', evt.target.id)
+	if (evt.target.innerHTML === '') {
+		// do loser
+		console.log("LOSER")
+	} else {
+		evt.target.innerHTML = '';
+		clicksRemaining--;
+	}
+	if ($('.tile').length === 0) {
+		// winner
+		console.log('WINNER')
+	}
+
+});
+
+//develop on click actions for Quit button
+$('#quit').on('click', function() {
+	getConfirmation();
+})
+
 //develop on click actions for Easy button
-$('.footer').click(function(event) {
-	if (event.target === $('#easy-button')[0]) {
-		levelEasy();
-		$('form p').html('&nbsp;');
-	}
+$('#easy-button').click(function(event) {
+	levelEasy();
+	$('.footer p').html('&nbsp;');
 });
 
 //develop on click actions for Medium button
-$('.footer').click(function(event) {
-	if (event.target === $('#med-button')[0]) {
-		levelMed();
-		$('form p').html('&nbsp;');
-	}
+$('#med-button').click(function(event) {
+	levelMed();
+	$('.footer p').html('&nbsp;');
 });
 
 //develop on click actions for Medium button
-$('.footer').click(function(event) {
-	if (event.target === $('#hard-button')[0]) {
-		levelHard();
-		$('form p').html('&nbsp;');
-	}
+$('#hard-button').click(function(event) {
+	levelHard();
+	$('.footer p').html('&nbsp;');
 });
 
 
@@ -79,7 +107,9 @@ var randomMoves = function (num) {
 }
 
 function playGame() {
+	reset();
 	setTiles();
+	clicksRemaining = level;
 	render();
 }
 
@@ -91,7 +121,7 @@ var setTiles = function() {
 	while (tiles !== level) {
 		randomY = randomMoves(4);
 		randomX = randomMoves(4);
-	 	while (board[randomY][randomX]) {
+	 	while (board[randomY][randomX] !== null) {
 			randomY = randomMoves(4);
 			randomX = randomMoves(4);
 	  	}
@@ -101,18 +131,14 @@ var setTiles = function() {
 		// then append to td cell
 		// create a .tile css rule: width & height: 100%
 		// update td style in css to add padding
-		var $tile = $('<div>', {'class': 'tile'});
-			$('.cell').append($tile);
-			$tile.css({'width': '100%', 'height': '100%', 'background-color': '#FF7F35'})
-		
 
+		var $tile = $('<div class="tile"></div>');
+		var id = '#' + randomY.toString() + randomX.toString();
+		$(id).append($tile);
 	  	tiles++;
 	}
  }  
 
-$tile.on('click', 'button', function(){
-	
-})
 
 //Develop easy level function
 var levelEasy = function() {
@@ -126,7 +152,6 @@ var levelMed = function() {
 	level = 4;
 	playGame();
 }
-//levelMed();
 
 
 //Develop hard level function
@@ -134,22 +159,3 @@ var levelHard = function() {
 	level = 6;
 	playGame();
 }
-//levelHard();
-
-
-/*
-//highligh random tiles
-var boxColors = function() {
-	for(var i = 0; i < 4; i++){
-		for (var j = 0; j < 4; j++){
-			if (board[i][j] === true){
-				$('#' + i + "," + j).addClass('comp-background');
-				$('#' + i + "," + j).fadeOut(3000, function() {
-				$('#' + i + "," + j).removeClass('comp-background')	
-				});
-			}
-		}
-	}
-}
-
-
