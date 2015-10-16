@@ -11,15 +11,17 @@ body {
 }
 
 #board{
-	background: url("https://i.imgur.com/27AR6s3.gif");
+	background: url("https://i.imgur.com/toxG4jy.jpg");
 	position: relative;
-	background-size: 1200px 850px;
+	
+	background-position: center;
+
 
 }
 
 header {
 	font-size: 20px;
-	font-family: Calibri;
+	font-family: 'Raleway';
 	padding-top: -50px auto;
 }
 
@@ -32,7 +34,7 @@ header {
 	width: 100%;
 	margin-top: 40px;
 	font-size: 30px;
-	font-family: Calibri;
+	font-family: 'Raleway';
 	color: #3498db;
 	
 }
@@ -42,7 +44,7 @@ header {
 	position: absolute;
 	background-color: orange;
 	color: white;
-	font-family: Calibri;
+	font-family: 'Raleway';
 	border: 25px solid white;
 	border-radius: 100px;
 	max-width: 500px;
