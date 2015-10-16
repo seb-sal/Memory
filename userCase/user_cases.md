@@ -28,11 +28,11 @@ Describe the basic functions of the Matrix Memory Game
 
 **MVP:**
 
-- [ ] Computer chooses random tiles.
+- [x] Game chooses random tiles.
 
-- [ ] Player chooses tiles.
+- [x] Player chooses tiles.
 
-- [ ] Game identifies correct tiles.
+- [x] Game identifies correct tiles.
 
-- [ ] Game identifies incorrect tiles.
+- [x] Game identifies incorrect tiles.
 
