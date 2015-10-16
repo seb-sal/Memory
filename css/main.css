@@ -18,7 +18,7 @@ body {
 }
 
 header {
-	font-size: 10px;
+	font-size: 20px;
 	font-family: Calibri;
 	padding-top: -50px auto;
 }
@@ -40,7 +40,7 @@ header {
 .all {
 	text-align: center;
 	position: absolute;
-	background-color: white;
+	background-color: orange;
 	color: white;
 	font-family: Calibri;
 	border: 25px solid white;
